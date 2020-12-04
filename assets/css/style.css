@@ -1,15 +1,30 @@
-body {margin: 0;}
+body {
+    margin: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+
+}
+
+#wrapper {
+}
+
+nav{
+    
+}
 
 /* Nav Bar */
 ul.topnav {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding-top: 1em;
   overflow: hidden;
-  background-color: #333;
+  background-color: #22333B;
 }
 
-ul.topnav li {float: left;}
+ul.topnav li {
+    float: left;
+    padding: 1em;
+    font-weight: bold;
+}
 
 ul.topnav li a {
   display: block;
@@ -19,12 +34,79 @@ ul.topnav li a {
   text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #111;}
+ul.topnav li :hover:not(.active) {
+    background-color: #111;
+}
 
-ul.topnav li a.active {background-color: #4CAF50;}
+ul.topnav li a.active {
+    background-color: #4CAF50;
+}
 
-ul.topnav li.right {float: right;}
+ul.topnav li.right {
+    margin-right: 2em;
+    float: right;
+}
 
+a.signupBut{
+    background-color: #C6AC8F;
+    color: black;
+    border-radius: 10px;
+}
+
+/* Landing page */
+#ylback{
+    position: absolute;
+    right:0;
+    width: 90%;
+    height: 650px;
+    background-color: #FFD369;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+#arrow{
+    position: absolute;
+    right:80px;
+    top:10px;
+}
+
+#landingLogo{
+    position: absolute;
+    right:200px;
+    top:200px;
+}
+
+.blinking {
+    animation: blinkingText 1s infinite;
+    /* font-family: futura;
+    font-style: italic;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    background-color: #fc030b; */
+}
+
+/* Specifies the animation and transparency for the blinking text */
+@keyframes blinkingText {
+
+    0% {
+        opacity: 1;
+    }
+
+    49%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* media query */
 @media screen and (max-width: 600px) {
   ul.topnav li.right, 
   ul.topnav li {float: none;}
