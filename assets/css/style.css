@@ -1,7 +1,20 @@
 body {
     margin: 0;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Mono', monospace;
 
+}
+
+body h2 {
+    font-family: 'Roboto Slab', serif;
+}
+
+#logoText{
+    font-family: 'Sigmar One', cursive;
+    color: #302833;
+}
+
+#logoTextS{
+    color:#CE5242;
 }
 
 #wrapper {
@@ -72,8 +85,33 @@ a.signupBut{
 
 #landingLogo{
     position: absolute;
-    right:200px;
+    left:300px;
     top:200px;
+}
+#landing h2{
+    font-size: 28px;
+    position: absolute;
+    left: 350px;
+    top: 300px;
+}
+
+#background2{
+    position:absolute;
+    right: 0px;
+    bottom: 600px;
+    opacity: 5%;
+    /* bottom:0px;
+    width: 700px;
+    opacity:10%; */
+   
+}
+
+#background3{
+    position: absolute;
+    left:0;
+    top:-350px;
+    height:200px;
+    opacity: 5%;
 }
 
 .blinking {
@@ -105,6 +143,8 @@ a.signupBut{
         opacity: 0;
     }
 }
+
+
 
 /* media query */
 @media screen and (max-width: 600px) {
