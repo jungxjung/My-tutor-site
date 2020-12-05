@@ -1,7 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Roboto Mono', monospace;
-
+    font-family: 'Roboto', sans-serif;
 }
 
 body h2 {
@@ -21,7 +20,12 @@ body h2 {
 }
 
 nav{
-    
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
 }
 
 /* Nav Bar */
@@ -195,6 +199,83 @@ a.signupBut{
   #myBtn:hover {
     background: #ddd;
     color:#251F18;
+  }
+
+  /* classes */
+
+  #classes{
+      position: relative;
+      top: 200px;
+  }
+  .h1header{
+      width: 95%;
+      height: 300px;
+      background-color: #FFF1CF;
+      border-radius: 50px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .h1header h1{
+      position: relative;
+      text-align: center;
+      top: 70px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      color:  #f8f5f1;
+      background-color:#5a7082;
+      
+  }
+
+  .classInfo {
+    position: relative;
+    top: -80px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: #f8f5f1;
+  }
+
+  .classInfo li{
+      text-align: left;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding-bottom: 10px;
+  }
+
+  .classInfo h3{
+      font-size: 50px;
+      font-family: 'Lobster', cursive;
+  }
+
+  .warning{
+      color: yellow;
+      font-weight: bold;
+  }
+
+  .classFlex{
+    flex-basis: 25%; 
+  }
+
+  .classFlex:nth-of-type(1), .classFlex:nth-of-type(3){
+    background-color: #22333B;
+  }
+
+  .classFlex:nth-of-type(2), .classFlex:nth-of-type(4){
+    background-color: #5E503F;
+  }
+
+  
+
+
+  .classImg{
+      width:80%;
+      margin-top: 20px;
+      background-color: tomato;
+      margin-left: auto;
+      margin-right: auto;
   }
 
 /* Specifies the animation and transparency for the blinking text */
