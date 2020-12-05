@@ -28,36 +28,71 @@
         <div id="landing">
             <div id="ylback">
                 <img id="arrow" class="blinking" src="assets/images/arrow1.png" alt="arrow" width="160px">
-                <img id="landingLogo" src="assets/images/newlogo.svg" alt="logo" width="850px">
+                <img id="landingLogo" src="assets/images/newlogo.svg" alt="logo">
                 <img id="background2" src="assets/images/Untitled.svg" alt="backgroud image">
                 <img id="background3" src="assets/images/Untitled (1).svg" alt="background image">
                 <h2>Give yourself a <span id="logoText">chen<span id="logoTextS">s</span></span> to start speaking <i>Mandarin!</i></h2>
             </div>
+        </div>
+
+        <div id="about">
+            <video autoplay muted loop id="myVideo">
+                <source src="assets/media/teachinhdemo.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="content">
+                <h1><span>About Me</span></h1>
+                <div class="bottom">
+                    <h2>Chih-Jung Chen 陳芝蓉</h2>
+                    <ul>
+                        <li>From Taipei, Taiwan</li>
+                        <li>Bachalors degree in Economics at National Chengchi University</li>
+                        <li>Professionally trained at Washington University in St. Louis</li>
+                        <li>2 years of teaching experience at Allegheny College, PA</li>
+                    </ul>
+                    <button id="myBtn" onclick="myFunction()">Pause</button>
+
+                </div>
+                
+              </div>
         </div>
     </div>
 
     <script>
         $("#background2").animate({right: '0px',
         bottom:'0px',
-        width: '700px',
+        width: '50%',
         opacity:'10%'},1000);       
         
         function forBG3(){
             $("#background3").animate({left:'0',
         top: '150px',
         opacity: '7%',
-        height: '300px'
+        height: '45%'
         },500);
 
        
         $("#background3").animate({
             top: "0px",
             opacity: '10%',
-            height:'400px'
+            height:'60%'
         }, 500);
         }
 
         setTimeout(forBG3, 800);
+
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+        }
         
 
         

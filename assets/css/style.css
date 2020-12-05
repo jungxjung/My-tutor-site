@@ -68,8 +68,8 @@ a.signupBut{
 
 /* Landing page */
 #ylback{
-    position: absolute;
-    right:0;
+    position: relative;
+    left:10%;
     width: 90%;
     height: 650px;
     background-color: #FFD369;
@@ -85,14 +85,15 @@ a.signupBut{
 
 #landingLogo{
     position: absolute;
-    left:300px;
-    top:200px;
+    left:20%;
+    top:25%;
+    width: 70%;
 }
 #landing h2{
     font-size: 28px;
     position: absolute;
-    left: 350px;
-    top: 300px;
+    left: 24%;
+    top: 43%;
 }
 
 #background2{
@@ -125,6 +126,76 @@ a.signupBut{
     font-size: 45px;
     background-color: #fc030b; */
 }
+
+/* about */
+
+#about{
+    position: relative;
+    top: 100px;
+}
+
+#myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  .content {
+      position: absolute;
+      top: 0;
+      right: 0;    
+      width: 50%;
+      height: 100%;
+      background: #5E503F;
+      color: #f8f5f1;
+      opacity: 85%;
+      border: none;
+      padding: 0;
+  }
+
+  .content h1 {
+      margin-top: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      text-align: right;
+      background-color:#251F18;     
+  }
+
+  h1 span {
+      padding-right: 50px;
+  }
+
+  .content h2 {
+      margin: 50px;
+  }
+
+  .content li{
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 20px;
+  }
+
+  .bottom{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+  }
+
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #251F18;
+    color: #fff;
+    cursor: pointer;
+    margin: 50px;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color:#251F18;
+  }
 
 /* Specifies the animation and transparency for the blinking text */
 @keyframes blinkingText {
