@@ -25,7 +25,7 @@ nav{
 
 h1{
     font-family: 'Roboto Mono', monospace;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 /* Nav Bar */
@@ -222,9 +222,9 @@ a.signupBut{
       top: 70px;
       padding-top: 20px;
       padding-bottom: 20px;
-      color:  #f8f5f1;
-      background-color:#5a7082;
-      
+      color:  #0A0908;
+      border-bottom:2px solid #0A0908;
+      border-top:2px solid #0A0908;
   }
 
   .classInfo {
@@ -267,8 +267,6 @@ a.signupBut{
     background-color: #5E503F;
   }
 
-  
-
 
   .classImg{
       width:80%;
@@ -276,6 +274,77 @@ a.signupBut{
       background-color: tomato;
       margin-left: auto;
       margin-right: auto;
+  }
+
+  .note{
+      color: #0A0908;
+      font-weight: bolder;
+  }
+
+  /* Features */
+
+  #features{
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+  #features h1{
+      text-align: right;
+      background-image: linear-gradient(to right, #cfb8a0, #b5b293, #98ab8f, #7ca292, #659897, #6c9c9b, #74a0a0, #7ba4a4, #9db8ae, #c0cbbe, #dfdfd5, #f8f5f1);
+  }
+
+  #features h3{
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  .divider{
+      height: 20px;
+      border: none;
+      background-image: url(../images/divider-2154993.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 35%;
+      
+  }
+
+  .fLeft{
+      float:left;
+  }
+
+  .fRight{
+      float:right;
+  }
+
+  .flex2 {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .flex2 p{
+      line-height: 200%;
+  }
+  .flex2fig {
+        width: 40%;
+        text-align: center;
+        font-style: italic;
+        font-size: small;
+        font-weight: bold;
+        text-indent: 0;
+        margin: 0.5em;
+        padding: 0.5em;
+  }
+  figure img {
+    width: 100%;
+}
+
+  .flexp {
+        width: 50%;
+        text-align: left;
+        margin: 0.5em;
+        padding: 0.5em;
   }
 
 /* Specifies the animation and transparency for the blinking text */
@@ -302,4 +371,14 @@ a.signupBut{
 @media screen and (max-width: 600px) {
   ul.topnav li.right, 
   ul.topnav li {float: none;}
+  .flex2 {
+    flex-direction: column;
+    align-items: center;
+    }
+    .flexp{
+        width: 80%;
+    }
+    .flex2fig {
+        width: 80%;
+    }
 }
