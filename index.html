@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chih-Jung Chen's Project3</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&family=Roboto+Slab:wght@200&family=Roboto:wght@300&family=Sigmar+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- jquery -->
     <script src="assets/jQuery/jquery-3.5.1.js"></script>
-    <script src="assets/jQuery/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-    <link rel="stylesheet" href="assets/jQuery/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/8f1a188b94.js" crossorigin="anonymous"></script>
+
+    <!-- my css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
    
 </head>
 <body>
@@ -43,7 +47,8 @@
             <video autoplay muted loop id="myVideo">
                 <source src="assets/media/teachinhdemo.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
-              </video>
+            </video>
+              <button id="myBtn" onclick="myFunction()"><i class="fas fa-pause-circle"></i></button>
               <div class="content">
                 <h1><span>About Me</span></h1>
                 <div class="bottom">
@@ -54,8 +59,7 @@
                         <li>Professionally trained at Washington University in St. Louis</li>
                         <li>2 years of teaching experience at Allegheny College, PA</li>
                     </ul>
-                    <button id="myBtn" onclick="myFunction()">Pause</button>
-
+                    
                 </div>
                 
               </div>
@@ -128,9 +132,8 @@
             <div id="features">
                 <a name="features"></a>
                 <h1>Features</h1>
-                <h2 class="fLeft"><sup><i class="fas fa-quote-left"></i></sup> <em>It's impossible to master a language without learning its culture.</em> <sup><i class="fas fa-quote-right"></i></sup></h2>
-                <h3 class="fRight">Be excited for our cultural events!</h3>
-                <div class="flex2 light">
+                <h2 class="fRight"><sup><i class="fas fa-quote-left"></i></sup> <em>It's impossible to master a language without learning its culture.</em> <sup><i class="fas fa-quote-right"></i></sup></h2>
+                <div class="flex2">
                     <figure class="flex2fig">
                         <img src="assets/images/IMG_1886.JPG" alt="calligraphy">
                         <figcaption>Student's work</figcaption>
@@ -143,7 +146,7 @@
                     </div>               
                 </div>
                 <hr class="divider">
-                <div class="flex2 light">
+                <div class="flex2">
                     <figure class="flex2fig">
                         <img src="assets/images/Chinese_Lunar_New_Year.jpg" alt="Chinese Lunar New Year ">
                         <figcaption>Chinese Lunar New Year 2014 Photo Credit: Chris Phutully</figcaption>
@@ -157,7 +160,31 @@
                         </p>
                     </div>               
                 </div>
+                <hr class="divider">
             </div>
+
+            <footer id="contact">
+                <a name="contact"></a>
+                <div class="wrapFlex">
+                    <div class="flex2">
+                        <div class="flex2fig">
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdI6HCvvV1jXA_dzUDqc435eetlgyUScS3CPnFuDy1KMwL-4w/viewform?embedded=true" width="420" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                        </div>
+                        <div class="flexp">
+                            <p><i class="fas fa-mobile-alt"></i>&nbsp;tel: 123-456-7890</p>
+                            <p><i class="far fa-envelope"></i>&nbsp;email:&nbsp;<a href="mailto: chihjungchen@outlook.com">chihjungchen@outlook.com</a></p>
+                            <p><i class="fab fa-linkedin"></i>&nbsp;LinkedIn:&nbsp;<a href="https://www.linkedin.com/in/chih-jung-chen/">Chih-Jung Chen</a></p>
+                            <p><i class="fas fa-map-marker-alt"></i>&nbsp;Rochester, NY</p>
+                        </div>
+                    </div>
+                </div>              
+                <div id="bottomLogo">
+                    <img src="assets/images/newlogo.svg" alt="Chens Tutor Logo">
+                </div>                                
+
+            </footer>
+
+            <button onclick="topFunction()" id="myBtn2" title="Go to top"><i class="far fa-arrow-alt-circle-up"></i></button>
             
            
 
@@ -195,12 +222,32 @@
         function myFunction() {
         if (video.paused) {
             video.play();
-            btn.innerHTML = "Pause";
+            btn.innerHTML = "<i class='fas fa-pause-circle'></i>";
         } else {
             video.pause();
-            btn.innerHTML = "Play";
+            btn.innerHTML = "<i class='fas fa-play-circle'></i>";
         }
         }
+
+        //Get the button
+var mybutton = document.getElementById("myBtn2");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
         
 
         
