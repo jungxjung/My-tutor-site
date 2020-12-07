@@ -22,14 +22,20 @@
 </head>
 <body>
     <div id="wrapper">
-        <nav>
-            <ul class="topnav">
-                <li><a href="#about">About</a></li>
-                <li><a href="#classes">Classes</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="right"><a class="signupBut" href="#signup">Sign Up</a></li>
-            </ul>
+        <nav class="topnav">
+            <a href="javascript:void(0);" class="icon" onclick="myMenu()">
+                <i class="fa fa-bars"></i>
+              </a>
+              <a class="right signupBut" href="#contact">Sign Up</a>
+            <div id="myLinks">
+                <a href="#about">About</a>
+                <a href="#classes">Classes</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </div>
+           
+            
+            
         </nav>
 
         <div id="landing">
@@ -44,13 +50,17 @@
 
         <div id="about">
             <a name:"about"></a>
-            <video autoplay muted loop id="myVideo">
-                <source src="assets/media/teachinhdemo.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
-            </video>
-              <button id="myBtn" onclick="myFunction()"><i class="fas fa-pause-circle"></i></button>
+            <h1 class="mobile"> About Me</h1>
+            <div class="testing">
+                <video autoplay muted loop id="myVideo">
+                    <source src="assets/media/teachinhdemo.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                  <button id="myBtn" title="Pause" onclick="myFunction()"><i class="fas fa-pause-circle"></i></button>
+            </div>
+            
               <div class="content">
-                <h1><span>About Me</span></h1>
+                <h1 class="desktop">About Me</h1>
                 <div class="bottom">
                     <h2>Chih-Jung Chen 陳芝蓉</h2>
                     <ul>
@@ -58,11 +68,13 @@
                         <li>Bachalors degree in Economics at National Chengchi University</li>
                         <li>Professionally trained at Washington University in St. Louis</li>
                         <li>2 years of teaching experience at Allegheny College, PA</li>
-                    </ul>
-                    
+                    </ul>            
                 </div>
-                
               </div>
+              <!-- for mobile display -->
+              
+
+
         </div>
 
         <div id="classes">
@@ -219,13 +231,24 @@
         var video = document.getElementById("myVideo");
         var btn = document.getElementById("myBtn");
 
+        function myMenu() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+}
+
         function myFunction() {
         if (video.paused) {
             video.play();
             btn.innerHTML = "<i class='fas fa-pause-circle'></i>";
+            btn.title="Pause";
         } else {
             video.pause();
             btn.innerHTML = "<i class='fas fa-play-circle'></i>";
+            btn.title="Play";
         }
         }
 

@@ -7,6 +7,11 @@ body h2 {
     font-family: 'Roboto Slab', serif;
 }
 
+h1{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+}
+
 #logoText{
     font-family: 'Sigmar One', cursive;
     color: #302833;
@@ -16,53 +21,68 @@ body h2 {
     color:#CE5242;
 }
 
-
-nav{
-    font-family: 'Roboto Mono', monospace;
+.mobile{
+    display:none;
 }
 
-h1{
-    font-family: 'Roboto Mono', monospace;
-    font-weight: bolder;
-}
 
 /* Nav Bar */
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding-top: 1em;
-  overflow: hidden;
-  background-color: #22333B;
+
+
+
+.topnav{
+    font-family: 'Roboto Mono', monospace;
+    background-color: #22333B;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    vertical-align: text-bottom;
 }
 
-ul.topnav li {
-    float: left;
-    padding: 1em;
+.topnav a{
+    text-decoration: none;
     font-weight: bold;
 }
 
-ul.topnav li a {
-  display: block;
+#myLinks {
+  margin-top: 28px;
+  overflow: hidden;
+  float:left;
+}
+
+#myLinks a {
+  font-weight: bold;
   color: white;
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-ul.topnav li :hover:not(.active) {
-    background-color: #111;
+
+a.icon{
+    color: #EAE0D5;
+    display: none;
 }
 
-ul.topnav li a.active {
-    background-color: #4CAF50;
+#myLinks a:hover {
+    background-color:#EAE0D5;
+    color:#22333B;
 }
 
-ul.topnav li.right {
-    margin-right: 2em;
+
+a.right {
     float: right;
 }
 
 a.signupBut{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: #C6AC8F;
     color: black;
     border-radius: 10px;
@@ -139,8 +159,10 @@ a.signupBut{
 #myVideo {
     right: 0;
     bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+    border:none;
+    margin: 0;
+    width: 100%  !important; 
+
   }
   .content {
       position: absolute;
@@ -160,12 +182,10 @@ a.signupBut{
       padding-top: 20px;
       padding-bottom: 20px;
       text-align: right;
-      background-color:#251F18;     
+      background-color:#251F18;
+      padding-right: 50px;     
   }
 
-  h1 span {
-      padding-right: 50px;
-  }
 
   .content h2 {
       margin: 50px;
@@ -179,7 +199,7 @@ a.signupBut{
 
   .bottom{
       position: absolute;
-      bottom: 80px;
+      bottom: 3em;
       left: 0;
   }
 
@@ -187,14 +207,26 @@ a.signupBut{
     position: absolute;
     left:30px;
     bottom:30px;
-    font-size: 25px;
-    padding: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
     border: none;
     background: #251F18;
     opacity: 50%;
     color: #fff;
     cursor: pointer;
-    margin: 50px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .testing{
+      width: 100%;
+      height: auto;
+      position: relative;
+      border:none;
+      padding:0;
+      margin: 0;
   }
   
   #myBtn:hover {
@@ -369,6 +401,10 @@ a.signupBut{
       align-items: flex-start;
   }
 
+  #contact .flex2fig{
+      width: 60%;
+  }
+
   #contact .flexp{
       width: 30%;
       margin-left: 1.8em;
@@ -442,17 +478,100 @@ a.signupBut{
 
 
 /* media query */
+@media screen and (max-width: 900px) {
+    #contact .flex2 {
+        flex-direction: column-reverse;
+        
+        }
+    #contact .flexp{
+        width: 80%;
+        padding:0;
+    }
+
+    #contact .flex2fig {
+        width: 80%;
+        padding:0;
+        margin:0;
+    }
+
+    #about .desktop {
+        display: none;
+    }
+
+    #about .mobile {
+        display: block;
+    }
+
+    #about .content {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        background-color: #5E503F;
+        color: #f8f5f1;
+        opacity: 85%;
+        border: none;
+        padding-top:20px;
+        padding-bottom: 20px;
+    }
+
+    #about .bottom{
+        position: relative;
+        height: 100%;
+        bottom: 0;
+        margin-left: 50px;
+    }
+
+    .content h2{
+        margin:0px;
+    }
+
+}
+
+
 @media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
+  .topnav #myLinks {
+      display: none;
+      float: none;
+      margin-top: 50px;
+    }
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .topnav a.icon {
+        color:#EAE0D5;
+        font-size: 25px;
+        display: block;
+        float:left;
+      }
+
+
   .flex2 {
+      width:90%;
     flex-direction: column;
     align-items: center;
     }
     .flexp{
         width: 80%;
+        padding:0;
+    }
+
+    #contact .flexp{
+        width: 100%;
+        padding:0;
     }
     .flex2fig {
         width: 80%;
+    }
+
+    .classInfo{
+        flex-direction: column;
     }
 }
