@@ -17,6 +17,10 @@ h1{
     color: #302833;
 }
 
+#landingLogo2{
+    display: none;
+}
+
 #logoTextS{
     color:#CE5242;
 }
@@ -60,6 +64,8 @@ h1{
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
+  transition: color 1s;
+    transition: background-color 1s;
 }
 
 
@@ -86,6 +92,14 @@ a.signupBut{
     background-color: #C6AC8F;
     color: black;
     border-radius: 10px;
+    transition: color 1s;
+    transition: background-color 1s;
+}
+
+a.signupBut:hover{
+    background-color: black;
+    color: #c6ac8f;
+    border: 1px solid #c6ac8f;
 }
 
 /* Landing page */
@@ -93,7 +107,7 @@ a.signupBut{
     position: relative;
     left:10%;
     width: 90%;
-    height: 650px;
+    height: 80vh;
     background-color: #FFD369;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -103,6 +117,7 @@ a.signupBut{
     position: absolute;
     right:80px;
     top:10px;
+    width: 10vw;
 }
 
 #landingLogo{
@@ -112,7 +127,7 @@ a.signupBut{
     width: 70%;
 }
 #landing h2{
-    font-size: 28px;
+    font-size: 2.5vw;
     position: absolute;
     left: 24%;
     top: 43%;
@@ -317,6 +332,8 @@ a.signupBut{
   /* Features */
 
   #features{
+      position: relative;
+      top: 150px;
       padding-left: 5%;
       padding-right: 5%;
   }
@@ -384,7 +401,7 @@ a.signupBut{
   /* footer */
   #contact{
     position: relative;
-      top: 100px;
+      top: 200px;
       background-color: #22333b;
       color: #EAE0D5;
   }
@@ -399,6 +416,7 @@ a.signupBut{
 
   #contact .flex2{
       align-items: flex-start;
+      margin-bottom:50px;
   }
 
   #contact .flex2fig{
@@ -412,6 +430,13 @@ a.signupBut{
 
   #contact a{
       color: #EAE0D5;
+      transition: color 1s;
+      transition: background-color 1s;
+  }
+
+  #contact a:hover{
+      background-color: #eae0d5;
+      color: #22333B;
   }
 
   iframe{
@@ -425,6 +450,10 @@ a.signupBut{
       background-color: #FFD369;
       color:silver;
       text-align: right;
+  }
+
+  #sources{
+      border: 1px dotted #eae0d5;
   }
 
   #bottomLogo img{
@@ -473,6 +502,12 @@ a.signupBut{
     }
 }
 
+/* for transition test */
+
+.classInfo .ani {
+  opacity: 50%;
+}
+
 
 
 
@@ -500,6 +535,15 @@ a.signupBut{
 
     #about .mobile {
         display: block;
+        width:100%;
+        position: absolute;
+        top:0;
+        right:0;
+        text-align: right;
+        background-color:#251F18;
+        padding-right: 50px;
+        color: white;
+        opacity: 80%;   
     }
 
     #about .content {
@@ -524,6 +568,22 @@ a.signupBut{
 
     .content h2{
         margin:0px;
+    }
+
+    #landingLogo{
+        display:none;
+    }
+
+    #landingLogo2{
+        position: absolute;
+        display: block;
+    left:42%;
+    top:25%;
+    width: 50%;
+    }
+
+    #landing h2{
+        top:58%;
     }
 
 }
@@ -573,5 +633,9 @@ a.signupBut{
 
     .classInfo{
         flex-direction: column;
+    }
+
+    iframe{
+        width:320px;
     }
 }
